@@ -1,0 +1,394 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    min-height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+main {
+
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 40px;
+    overflow: hidden;
+
+}
+
+main > div {
+
+    /*flex-basis: 482px;*/
+    max-width: 482px;
+    padding: 2.5rem;
+    color: hsl(234, 29%, 20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.8125rem;
+
+}
+
+main > div > div {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+main  p {
+
+    line-height: 1.45rem;
+
+}
+
+main  h1 {
+
+    color: hsl(234, 29%, 20%);
+    font-size: 3.5rem;
+
+}
+
+main ul {
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+}
+
+main li {
+
+    display: flex;
+    align-items: center;
+    gap: 1.0625rem;
+    
+
+}
+
+main figure {
+
+    max-width: 476px;
+    min-width: 330px;
+    display: flex;
+    align-items: center;
+
+}
+
+main figure img:first-of-type {
+
+    display: block;
+    max-width: 100%;
+
+}
+
+main figure img:last-of-type {
+
+    display: none;
+    max-width: 100%;
+
+}
+
+main form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+main form div {
+
+    display: flex;
+    flex-direction: column;
+    gap: .8125rem;
+
+}
+
+main form div > span {
+
+    font-size: .8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#error-message {
+
+    color: hsl(4, 100%, 67%);
+
+}
+
+.display-none {
+
+    display: none;
+
+}
+
+main form div label {
+
+    color: hsl(234, 29%, 20%);
+
+}
+
+main form div input {
+
+    padding: 1.25rem;
+    border-radius: 10px;
+    outline: none;
+
+}
+
+.email-input {
+
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    color: rgba(128, 128, 128, 0.6);
+
+}
+
+.email-input:focus {
+
+    border: 1px solid hsl(234, 29%, 20%);
+    color: hsl(234, 29%, 20%);
+
+}
+
+.email-input:hover {
+
+    border: 1px solid hsl(234, 29%, 20%);
+
+}
+
+.email-input::placeholder {
+
+    color: rgba(128, 128, 128, 0.6);
+
+}
+
+.email-input:-webkit-autofill {
+    box-shadow:0 0 0 50px hsl(0, 0%, 100%) inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: rgba(128, 128, 128, 0.6);
+}
+
+.email-input:-webkit-autofill:focus {
+    box-shadow: /*your box-shadow*/0 0 0 50px hsl(0, 0%, 100%) inset;
+    -webkit-text-fill-color: hsl(234, 29%, 20%);
+
+}
+
+.email-input-error {
+
+    background-color: #ffe8e4;
+    border: 1px solid hsl(4, 100%, 67%);
+    color: hsla(4, 100%, 67%, 0.61);
+
+}
+
+.email-input-error:focus {
+
+    outline: 1px solid hsl(4, 100%, 67%);
+    outline-offset: -2px;
+    color: hsl(4, 100%, 67%);
+
+}
+
+.email-input-error:hover {
+
+    outline: 1px solid hsl(4, 100%, 67%);
+    outline-offset: -2px;
+
+}
+
+.email-input-error::placeholder {
+
+    color: hsla(4, 100%, 67%, 0.61);
+
+}
+
+.email-input-error:-webkit-autofill {
+    box-shadow:0 0 0 50px #ffe8e4 inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: hsla(4, 100%, 67%, 0.61);
+}
+
+.email-input-error:-webkit-autofill:focus {
+    box-shadow: 0 0 0 50px #ffe8e4 inset;
+    -webkit-text-fill-color: hsl(4, 100%, 67%);
+
+}
+
+main form button {
+
+    padding: 1.3125rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    background-color: hsl(234, 29%, 20%);
+    cursor: pointer;
+
+
+}
+
+main form button:focus {
+
+    outline: 3px solid hsl(4, 100%, 67%);
+    outline-offset: -3px;
+
+}
+
+main form button:hover {
+    
+    background-image: linear-gradient(90deg, rgba(255,83,123,1) 0%, rgba(252,106,65,1) 85%);
+    box-shadow: 0 6px 20px hsla(4, 100%, 67%, 0.705);
+    
+}
+
+@media screen and (max-width: 950px) {
+    
+    :root {
+        font-size: 15px;
+    }
+
+    main  h1 {
+        font-size: 2.8rem;
+    }
+
+}
+
+@media screen and (max-width: 759px) {
+    
+    :root {
+        font-size: 14px;
+    }
+
+    main figure {
+        min-width: 250px;
+    }
+
+    main  h1 {
+        font-size: 2.6rem;
+    }
+
+    main {
+        gap: 1.5rem;
+        padding: 1rem;
+        border-radius: 20px;
+    }    
+
+    main > div {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    main > div > div {
+        gap: 1rem;
+    }
+
+    main  p {
+        line-height: 1.35rem;
+    }
+
+    main ul {
+        gap: 0.7rem;
+    }
+
+    main form {
+        gap: 1rem;
+    }
+
+    main form div {
+        gap: .6125rem;
+    }
+
+    main form div input {
+        padding: 1rem;
+    }
+
+    main form button {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    
+    main h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 555px) {
+
+    :root {
+        font-size: 13px;
+    }
+
+    main {
+        gap: 1rem;
+    }
+
+    main figure {
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 497px) {
+    
+    body {
+        background-color: hsl(0, 0%, 100%);
+        align-items: start;
+    }
+
+    main {
+        padding: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    main h1 {
+        font-size: 2.7rem;
+    }
+
+    main > div {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    main figure img:first-of-type {
+        display: none;
+    }
+
+    main figure img:last-of-type {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 296px) {
+
+    :root {
+        font-size: 12px;
+    }
+
+    main > div {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    main h1 {
+        font-size: 2.2rem;
+    }
+}
