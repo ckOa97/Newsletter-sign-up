@@ -346,7 +346,7 @@ main form button:hover {
     }
 
     main {
-        gap: 1rem;
+        gap: 0rem;
     }
 
     main figure {
@@ -376,7 +376,8 @@ main form button:hover {
     }
 
     main > div {
-        padding: 0 2rem 2rem 2rem;
+        padding: 2rem;
+        max-width: 411px;
     }
 
     main figure img:first-of-type {
@@ -404,7 +405,7 @@ main form button:hover {
     }
 
     main > div {
-        padding: 0 1rem 1rem 1rem;
+        padding: 1rem;
     }
 
     main h1 {
