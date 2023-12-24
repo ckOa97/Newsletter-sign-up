@@ -111,6 +111,16 @@ main form {
 
 }
 
+.mobile-form {
+
+    display: none;
+    width: 100%;
+    align-self: center;
+    padding: 2rem;
+    max-width: 411px;
+
+}
+
 main form div {
 
     display: flex;
@@ -128,16 +138,14 @@ main form div > span {
 
 }
 
-#error-message {
+.error-message {
 
     color: hsl(4, 100%, 67%);
 
 }
 
 .display-none {
-
     display: none;
-
 }
 
 main form div label {
@@ -350,14 +358,17 @@ main form button:hover {
     
     body {
         background-color: hsl(0, 0%, 100%);
-        align-items: start;
+        justify-content: center;
+        align-items: stretch;
     }
 
     main {
         padding: 0;
         flex-direction: column-reverse;
+        justify-content: space-between;
         align-items: center;
         border-radius: 0;
+        min-height: 100vh;
     }
 
     main h1 {
@@ -376,6 +387,14 @@ main form button:hover {
         display: block;
     }
 
+    .mobile-form {
+        display: flex;
+    }
+
+    .desktop-form {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 296px) {
@@ -390,5 +409,9 @@ main form button:hover {
 
     main h1 {
         font-size: 2.2rem;
+    }
+
+    .mobile-form {
+        padding: 1rem;
     }
 }

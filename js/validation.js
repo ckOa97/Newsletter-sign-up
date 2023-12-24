@@ -1,17 +1,21 @@
-const input = document.querySelector('main form input');
-const errorMessage = document.querySelector('#error-message');
+const formElements = document.querySelectorAll('main form');
 const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-document.forms.newsletter.addEventListener('submit', e => {
+formElements.forEach(el => {
 
-    if(!input.value.match(emailRegExp)) {
-        e.preventDefault();
-        if(errorMessage.classList.contains('display-none'))
-            errorMessage.classList.remove('display-none');
+    el.addEventListener('submit', e => {
 
-        if(input.classList.contains('email-input')) {
-            input.classList.remove('email-input');
-            input.classList.add('email-input-error');
+        if(!el.querySelector('input').value.match(emailRegExp)) {
+            e.preventDefault();
+            formElements.forEach(el => {
+                if(el.querySelector('.error-message').classList.contains('display-none'))
+                    el.querySelector('.error-message').classList.remove('display-none');
+    
+                if(el.querySelector('input').classList.contains('email-input')) {
+                    el.querySelector('input').classList.remove('email-input');
+                    el.querySelector('input').classList.add('email-input-error');
+                }
+            });
         }
-    }
+    });
 });

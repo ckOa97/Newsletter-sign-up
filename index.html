@@ -15,6 +15,16 @@
 </head>
 <body>
   <main>
+    <form name="newsletter" action="success-message/index.html" method="get" class="mobile-form">
+      <div>
+        <span>
+          <label for="email-mobile">Email address</label>
+          <span class="error-message display-none">Valid email required</span>
+        </span>
+        <input class="email-input" type="text" name="email" id="email-mobile" placeholder="email@company.com" autocomplete="on">
+      </div>
+      <button type="submit">Subscribe to monthly newsletter</button>
+    </form>
     <div>
       <div>
         <h1>Stay updated!</h1>
@@ -25,13 +35,13 @@
           <li><img src="assets/images/icon-list.svg" alt="list icon"><span>And much more!</span></li>
         </ul>
       </div>
-      <form name="newsletter" action="success-message/index.html" method="get">
+      <form name="newsletter" action="success-message/index.html" method="get" class="desktop-form">
         <div>
           <span>
-            <label for="email">Email address</label>
-            <span id="error-message" class="display-none">Valid email required</span>
+            <label for="email-desktop">Email address</label>
+            <span class="error-message display-none">Valid email required</span>
           </span>
-          <input class="email-input" type="text" name="email" id="email" placeholder="email@company.com">
+          <input class="email-input" type="text" name="email" id="email-desktop" placeholder="email@company.com" autocomplete="on">
         </div>
         <button type="submit">Subscribe to monthly newsletter</button>
       </form>
@@ -41,11 +51,10 @@
       <img src="assets/images/illustration-sign-up-mobile.svg" alt="illustration sign up">
     </figure>
   </main>
-  <!--
-  <div class="attribution">
+  <!--<footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    Coded by <a href="https://www.frontendmentor.io/profile/ckOa97" target="_blank>Aleksandar Stankovic</a>.
+  </footer>-->
   <script src="js/validation.js"></script>
 </body>
 </html>
